@@ -19,14 +19,17 @@ ko.bindingHandlers.dateRangePicker = {
         .val(ReservationRange.toRangeFormat(dateModel.checkIn(), dateModel.checkOut()))
         .daterangepicker(dateModel.options)
         .on('apply.daterangepicker', function(ev, picker) {
-          dateModel.checkIn(picker.startDate.format('YYYY-MM-DD'));
-          dateModel.checkOut(picker.endDate.format('YYYY-MM-DD'));
+          dateModel.checkIn(picker.startDate.format('MM-DD-YYYY'));
+          dateModel.checkOut(picker.endDate.format('MM-DD-YYYY'));
         });
     },
     update: function(element, valueAccessor) {
       var dateModel = valueAccessor();
       $(element)
-        .val(ReservationRange.toRangeFormat(dateModel.checkIn(), dateModel.checkOut()))
+        .daterangepicker({
+          startDate: dateModel.checkIn(),
+          endDate: dateModel.checkOut()
+        });
     }
 };
 
