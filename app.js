@@ -26,10 +26,10 @@ ko.bindingHandlers.dateRangePicker = {
     update: function(element, valueAccessor) {
       var dateModel = valueAccessor();
       $(element)
-        .daterangepicker({
+        .daterangepicker(Object.assign({}, dateModel.options, {
           startDate: dateModel.checkIn(),
           endDate: dateModel.checkOut()
-        });
+        }));
     }
 };
 
