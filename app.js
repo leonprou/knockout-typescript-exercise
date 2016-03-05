@@ -3,12 +3,10 @@ function ReservationRange() {
     this.checkOut = ko.observable('03/16/2016');
     this.options = {
       minDate: '03/01/2016',
-      maxDate: '03/01/2017'
+      maxDate: '03/01/2017',
+      startDate: this.checkIn(),
+      endDate: this.checkOut()
     };
-}
-
-ReservationRange.toRangeFormat = function(checkIn, checkOut) {
-  return checkIn + ' - ' + checkOut;
 }
 
 ko.bindingHandlers.dateRangePicker = {
@@ -16,7 +14,6 @@ ko.bindingHandlers.dateRangePicker = {
       var dateModel = valueAccessor();
 
       $(element)
-        .val(ReservationRange.toRangeFormat(dateModel.checkIn(), dateModel.checkOut()))
         .daterangepicker(dateModel.options)
         .on('apply.daterangepicker', function(ev, picker) {
           dateModel.checkIn(picker.startDate.format('MM-DD-YYYY'));
@@ -26,10 +23,8 @@ ko.bindingHandlers.dateRangePicker = {
     update: function(element, valueAccessor) {
       var dateModel = valueAccessor();
       $(element)
-        .daterangepicker(Object.assign({}, dateModel.options, {
-          startDate: dateModel.checkIn(),
-          endDate: dateModel.checkOut()
-        }));
+        .data('daterangepicker').setStartDate(dateModel.checkIn())
+        .data('daterangepicker').setEndDate(dateModel.checkIn())
     }
 };
 
