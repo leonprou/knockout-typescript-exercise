@@ -1,0 +1,27 @@
+{
+  "name": "knockout-typescript-exercise",
+  "version": "0.0.0",
+  "homepage": "https://github.com/leonprou/knockout-typescript-exercise",
+  "authors": [
+    "leonprou <leonprou@gmail.com>"
+  ],
+  "description": "",
+  "main": "src/app.js",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "knockout": "~3.4.0",
+    "jquery": "~2.2.1",
+    "moment": "momentjs#~2.11.2",
+    "bootstrap": "~3.3.6",
+    "daterangepicker": "~1.4.2",
+    "requirejs": "~2.1.22"
+  }
+}

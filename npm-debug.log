@@ -1,0 +1,95 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/leonprouger/.nvm/versions/node/v5.3.0/bin/node',
+1 verbose cli   '/Users/leonprouger/.nvm/versions/node/v5.3.0/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'daterangepicker@2.1.18',
+1 verbose cli   '--save' ]
+2 info using npm@3.5.2
+3 info using node@v5.3.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData daterangepicker@2.1.18
+8 silly fetchNamedPackageData daterangepicker
+9 silly mapToRegistry name daterangepicker
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/daterangepicker
+13 verbose request uri https://registry.npmjs.org/daterangepicker
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 5:08:12 PM
+16 verbose request id f05eae9f863e973f
+17 http request GET https://registry.npmjs.org/daterangepicker
+18 http 200 https://registry.npmjs.org/daterangepicker
+19 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+19 verbose headers   etag: '"CFVOFZJL5GNF8EHDZQZEBHJHJ"',
+19 verbose headers   'content-type': 'application/json',
+19 verbose headers   'cache-control': 'max-age=300',
+19 verbose headers   'content-length': '11903',
+19 verbose headers   'accept-ranges': 'bytes',
+19 verbose headers   date: 'Sat, 05 Mar 2016 15:08:14 GMT',
+19 verbose headers   via: '1.1 varnish',
+19 verbose headers   age: '0',
+19 verbose headers   connection: 'keep-alive',
+19 verbose headers   'x-served-by': 'cache-fra1228-FRA',
+19 verbose headers   'x-cache': 'MISS',
+19 verbose headers   'x-cache-hits': '0',
+19 verbose headers   'x-timer': 'S1457190493.883724,VS0,VE442',
+19 verbose headers   vary: 'Accept' }
+20 silly get cb [ 200,
+20 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+20 silly get     etag: '"CFVOFZJL5GNF8EHDZQZEBHJHJ"',
+20 silly get     'content-type': 'application/json',
+20 silly get     'cache-control': 'max-age=300',
+20 silly get     'content-length': '11903',
+20 silly get     'accept-ranges': 'bytes',
+20 silly get     date: 'Sat, 05 Mar 2016 15:08:14 GMT',
+20 silly get     via: '1.1 varnish',
+20 silly get     age: '0',
+20 silly get     connection: 'keep-alive',
+20 silly get     'x-served-by': 'cache-fra1228-FRA',
+20 silly get     'x-cache': 'MISS',
+20 silly get     'x-cache-hits': '0',
+20 silly get     'x-timer': 'S1457190493.883724,VS0,VE442',
+20 silly get     vary: 'Accept' } ]
+21 verbose get saving daterangepicker to /Users/leonprouger/.npm/registry.npmjs.org/daterangepicker/.cache.json
+22 silly fetchPackageMetaData Error: No compatible version found: daterangepicker@2.1.18
+22 silly fetchPackageMetaData Valid install targets:
+22 silly fetchPackageMetaData 0.0.3, 0.0.2, 0.0.1
+22 silly fetchPackageMetaData
+22 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (/Users/leonprouger/.nvm/versions/node/v5.3.0/lib/node_modules/npm/lib/fetch-package-metadata.js:156:16)
+22 silly fetchPackageMetaData     at /Users/leonprouger/.nvm/versions/node/v5.3.0/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+22 silly fetchPackageMetaData     at /Users/leonprouger/.nvm/versions/node/v5.3.0/lib/node_modules/npm/lib/utils/pulse-till-done.js:19:8
+22 silly fetchPackageMetaData     at saved (/Users/leonprouger/.nvm/versions/node/v5.3.0/lib/node_modules/npm/lib/cache/caching-client.js:168:7)
+22 silly fetchPackageMetaData     at /Users/leonprouger/.nvm/versions/node/v5.3.0/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:210:7
+22 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:82:15)
+22 silly fetchPackageMetaData  error for daterangepicker@2.1.18 [Error: No compatible version found: daterangepicker@2.1.18
+22 silly fetchPackageMetaData Valid install targets:
+22 silly fetchPackageMetaData 0.0.3, 0.0.2, 0.0.1
+22 silly fetchPackageMetaData ]
+23 silly rollbackFailedOptional Starting
+24 silly rollbackFailedOptional Finishing
+25 silly runTopLevelLifecycles Starting
+26 silly runTopLevelLifecycles Finishing
+27 silly install printInstalled
+28 verbose stack Error: No compatible version found: daterangepicker@2.1.18
+28 verbose stack Valid install targets:
+28 verbose stack 0.0.3, 0.0.2, 0.0.1
+28 verbose stack
+28 verbose stack     at pickVersionFromRegistryDocument (/Users/leonprouger/.nvm/versions/node/v5.3.0/lib/node_modules/npm/lib/fetch-package-metadata.js:156:16)
+28 verbose stack     at /Users/leonprouger/.nvm/versions/node/v5.3.0/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+28 verbose stack     at /Users/leonprouger/.nvm/versions/node/v5.3.0/lib/node_modules/npm/lib/utils/pulse-till-done.js:19:8
+28 verbose stack     at saved (/Users/leonprouger/.nvm/versions/node/v5.3.0/lib/node_modules/npm/lib/cache/caching-client.js:168:7)
+28 verbose stack     at /Users/leonprouger/.nvm/versions/node/v5.3.0/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:210:7
+28 verbose stack     at FSReqWrap.oncomplete (fs.js:82:15)
+29 verbose cwd /Users/leonprouger/workspace/knockout-typescript-exercise
+30 error Darwin 15.0.0
+31 error argv "/Users/leonprouger/.nvm/versions/node/v5.3.0/bin/node" "/Users/leonprouger/.nvm/versions/node/v5.3.0/bin/npm" "install" "daterangepicker@2.1.18" "--save"
+32 error node v5.3.0
+33 error npm  v3.5.2
+34 error No compatible version found: daterangepicker@2.1.18
+34 error Valid install targets:
+34 error 0.0.3, 0.0.2, 0.0.1
+35 error If you need help, you may report this error at:
+35 error     <https://github.com/npm/npm/issues>
+36 verbose exit [ 1, true ]
