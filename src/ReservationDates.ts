@@ -11,7 +11,6 @@ class ReservationDates {
       this.options = options;
       this.options.startDate = checkIn;
       this.options.endDate = checkOut;
-
     }
 }
 
