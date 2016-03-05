@@ -16,15 +16,18 @@ ko.bindingHandlers.dateRangePicker = {
       $(element)
         .daterangepicker(dateModel.options)
         .on('apply.daterangepicker', function(ev, picker) {
-          dateModel.checkIn(picker.startDate.format('MM-DD-YYYY'));
-          dateModel.checkOut(picker.endDate.format('MM-DD-YYYY'));
+          var startDate = picker.startDate.clone();
+          var endDate = picker.endDate.clone();
+
+          dateModel.checkIn(startDate.format('MM-DD-YYYY'));
+          dateModel.checkOut(endDate.format('MM-DD-YYYY'));
         });
     },
     update: function(element, valueAccessor) {
       var dateModel = valueAccessor();
-      $(element)
-        .data('daterangepicker').setStartDate(dateModel.checkIn())
-        .data('daterangepicker').setEndDate(dateModel.checkIn())
+      var jqElem = $(element);
+      jqElem.data('daterangepicker').setStartDate(dateModel.checkIn())
+      jqElem.data('daterangepicker').setEndDate(dateModel.checkOut())
     }
 };
 
