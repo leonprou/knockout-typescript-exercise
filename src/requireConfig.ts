@@ -7,7 +7,6 @@ require.config({
         "underscore": "bower_components/underscore/underscore",
         "moment": "bower_components/moment/moment",
         "moment-timezone": "http://momentjs.com/downloads/moment-timezone-with-data-2010-2020"
-
     },
     shim: {
         "jquery": {

@@ -1,24 +1,24 @@
-
 import ko = require('knockout');
+import ReservationDates = require('./ReservationDates');
 
 class DateRangePickerBinder {
-    init(element: any, valueAccessor: any) {
-      var dateModel = valueAccessor();
+    init(element: HTMLElement, valueAccessor: () => ReservationDates) {
+      var dateModel : ReservationDates = valueAccessor();
 
       $(element)
         .daterangepicker(dateModel.options)
         .on('apply.daterangepicker', function(ev, picker) {
-          var startDate = picker.startDate.clone();
-          var endDate = picker.endDate.clone();
+          var startDate : moment.Moment = picker.startDate.clone();
+          var endDate : moment.Moment = picker.endDate.clone();
 
-          dateModel.checkIn(startDate.format('MM-DD-YYYY'));
-          dateModel.checkOut(endDate.format('MM-DD-YYYY'));
+          dateModel.checkIn(new Date(startDate.format('MM-DD-YYYY')));
+          dateModel.checkOut(new Date(endDate.format('MM-DD-YYYY')));
         });
     }
 
-    update(element: any, valueAccessor: any) {
-      var dateModel = valueAccessor();
-      var jqElem = $(element);
+    update(element: HTMLElement, valueAccessor: () => ReservationDates) {
+      var dateModel : ReservationDates = valueAccessor();
+      var jqElem : JQuery = $(element);
       jqElem.data('daterangepicker').setStartDate(dateModel.checkIn())
       jqElem.data('daterangepicker').setEndDate(dateModel.checkOut())
     }
