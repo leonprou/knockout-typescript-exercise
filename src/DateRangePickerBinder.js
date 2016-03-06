@@ -10,8 +10,8 @@ define(["require", "exports"], function (require, exports) {
                 .on('apply.daterangepicker', function (ev, picker) {
                 var startDate = picker.startDate.clone();
                 var endDate = picker.endDate.clone();
-                dateModel.checkIn(new Date(startDate.format('MM-DD-YYYY')));
-                dateModel.checkOut(new Date(endDate.format('MM-DD-YYYY')));
+                dateModel.checkIn(new Date(startDate.format('MM/DD/YYYY')));
+                dateModel.checkOut(new Date(endDate.format('MM/DD/YYYY')));
             });
         };
         DateRangePickerBinder.prototype.update = function (element, valueAccessor) {

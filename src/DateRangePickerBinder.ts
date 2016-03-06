@@ -11,8 +11,8 @@ class DateRangePickerBinder {
           var startDate : moment.Moment = picker.startDate.clone();
           var endDate : moment.Moment = picker.endDate.clone();
 
-          dateModel.checkIn(new Date(startDate.format('MM-DD-YYYY')));
-          dateModel.checkOut(new Date(endDate.format('MM-DD-YYYY')));
+          dateModel.checkIn(new Date(startDate.format('MM/DD/YYYY')));
+          dateModel.checkOut(new Date(endDate.format('MM/DD/YYYY')));
         });
     }
 
